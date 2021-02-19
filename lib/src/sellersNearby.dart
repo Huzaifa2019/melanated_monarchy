@@ -72,14 +72,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                     ),
                   ),
                 ),
-                title: Flexible(
-                  child: Text(
-                    'Dondre Williams',
-                    style: TextStyle(
-                      color: Color.fromRGBO(231, 198, 142, 1.0),
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w400,
-                    ),
+                title: Text(
+                  'Dondre Williams',
+                  style: TextStyle(
+                    color: Color.fromRGBO(231, 198, 142, 1.0),
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 subtitle: Row(
@@ -89,14 +87,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                       color: Color.fromRGBO(231, 198, 142, 1.0),
                       size: 17,
                     ),
-                    Flexible(
-                      child: Text(
-                        'Houston, TX',
-                        style: TextStyle(
-                          color: Color.fromRGBO(231, 198, 142, 0.7),
-                          fontFamily: 'Nunito',
-                          fontWeight: FontWeight.w400,
-                        ),
+                    Text(
+                      'Houston, TX',
+                      style: TextStyle(
+                        color: Color.fromRGBO(231, 198, 142, 0.7),
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ],
@@ -125,10 +121,10 @@ class _SellersNearbyState extends State<SellersNearby> {
                   ),
                 ),
               ),
-
               SizedBox(
                 height: 5,
               ),
+
               ListTile(
                 leading: Container(
                   height: 55,
@@ -145,14 +141,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                     ),
                   ),
                 ),
-                title: Flexible(
-                  child: Text(
-                    'Dondre Williams',
-                    style: TextStyle(
-                      color: Color.fromRGBO(231, 198, 142, 1.0),
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w400,
-                    ),
+                title: Text(
+                  'Dondre Williams',
+                  style: TextStyle(
+                    color: Color.fromRGBO(231, 198, 142, 1.0),
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 subtitle: Row(
@@ -162,20 +156,19 @@ class _SellersNearbyState extends State<SellersNearby> {
                       color: Color.fromRGBO(231, 198, 142, 1.0),
                       size: 17,
                     ),
-                    Flexible(
-                      child: Text(
-                        'Houston, TX',
-                        style: TextStyle(
-                          color: Color.fromRGBO(231, 198, 142, 0.7),
-                          fontFamily: 'Nunito',
-                          fontWeight: FontWeight.w400,
-                        ),
+                    Text(
+                      'Houston, TX',
+                      style: TextStyle(
+                        color: Color.fromRGBO(231, 198, 142, 0.7),
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ],
                 ),
                 trailing: GestureDetector(
-                  onTap: () {},
+                  onTap: () {}
+                  ,
                   child: Container(
                     padding: EdgeInsets.symmetric(
                       vertical: 5,
@@ -200,6 +193,9 @@ class _SellersNearbyState extends State<SellersNearby> {
               SizedBox(
                 height: 5,
               ),
+
+
+
               ListTile(
                 leading: Container(
                   height: 55,
@@ -216,14 +212,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                     ),
                   ),
                 ),
-                title: Flexible(
-                  child: Text(
-                    'Dondre Williams',
-                    style: TextStyle(
-                      color: Color.fromRGBO(231, 198, 142, 1.0),
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w400,
-                    ),
+                title: Text(
+                  'Dondre Williams',
+                  style: TextStyle(
+                    color: Color.fromRGBO(231, 198, 142, 1.0),
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 subtitle: Column(
@@ -237,14 +231,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                           color: Color.fromRGBO(231, 198, 142, 1.0),
                           size: 17,
                         ),
-                        Flexible(
-                          child: Text(
-                            'Houston, TX',
-                            style: TextStyle(
-                              color: Color.fromRGBO(231, 198, 142, 0.7),
-                              fontFamily: 'Nunito',
-                              fontWeight: FontWeight.w400,
-                            ),
+                        Text(
+                          'Houston, TX',
+                          style: TextStyle(
+                            color: Color.fromRGBO(231, 198, 142, 0.7),
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ],
@@ -311,6 +303,7 @@ class _SellersNearbyState extends State<SellersNearby> {
               SizedBox(
                 height: 5,
               ),
+
               ListTile(
                 leading: Container(
                   height: 55,
@@ -327,14 +320,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                     ),
                   ),
                 ),
-                title: Flexible(
-                  child: Text(
-                    'Dondre Williams',
-                    style: TextStyle(
-                      color: Color.fromRGBO(231, 198, 142, 1.0),
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w400,
-                    ),
+                title: Text(
+                  'Dondre Williams',
+                  style: TextStyle(
+                    color: Color.fromRGBO(231, 198, 142, 1.0),
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 subtitle: Row(
@@ -344,20 +335,19 @@ class _SellersNearbyState extends State<SellersNearby> {
                       color: Color.fromRGBO(231, 198, 142, 1.0),
                       size: 17,
                     ),
-                    Flexible(
-                      child: Text(
-                        'Houston, TX',
-                        style: TextStyle(
-                          color: Color.fromRGBO(231, 198, 142, 0.7),
-                          fontFamily: 'Nunito',
-                          fontWeight: FontWeight.w400,
-                        ),
+                    Text(
+                      'Houston, TX',
+                      style: TextStyle(
+                        color: Color.fromRGBO(231, 198, 142, 0.7),
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ],
                 ),
                 trailing: GestureDetector(
-                  onTap: () {},
+                  onTap: () {}
+                  ,
                   child: Container(
                     padding: EdgeInsets.symmetric(
                       vertical: 5,
@@ -379,10 +369,10 @@ class _SellersNearbyState extends State<SellersNearby> {
                   ),
                 ),
               ),
-
               SizedBox(
                 height: 5,
               ),
+
               ListTile(
                 leading: Container(
                   height: 55,
@@ -399,14 +389,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                     ),
                   ),
                 ),
-                title: Flexible(
-                  child: Text(
-                    'Dondre Williams',
-                    style: TextStyle(
-                      color: Color.fromRGBO(231, 198, 142, 1.0),
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w400,
-                    ),
+                title: Text(
+                  'Dondre Williams',
+                  style: TextStyle(
+                    color: Color.fromRGBO(231, 198, 142, 1.0),
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 subtitle: Row(
@@ -416,20 +404,19 @@ class _SellersNearbyState extends State<SellersNearby> {
                       color: Color.fromRGBO(231, 198, 142, 1.0),
                       size: 17,
                     ),
-                    Flexible(
-                      child: Text(
-                        'Houston, TX',
-                        style: TextStyle(
-                          color: Color.fromRGBO(231, 198, 142, 0.7),
-                          fontFamily: 'Nunito',
-                          fontWeight: FontWeight.w400,
-                        ),
+                    Text(
+                      'Houston, TX',
+                      style: TextStyle(
+                        color: Color.fromRGBO(231, 198, 142, 0.7),
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ],
                 ),
                 trailing: GestureDetector(
-                  onTap: () {},
+                  onTap: () {}
+                  ,
                   child: Container(
                     padding: EdgeInsets.symmetric(
                       vertical: 5,
@@ -451,10 +438,10 @@ class _SellersNearbyState extends State<SellersNearby> {
                   ),
                 ),
               ),
-
               SizedBox(
                 height: 5,
               ),
+
               ListTile(
                 leading: Container(
                   height: 55,
@@ -471,14 +458,12 @@ class _SellersNearbyState extends State<SellersNearby> {
                     ),
                   ),
                 ),
-                title: Flexible(
-                  child: Text(
-                    'Dondre Williams',
-                    style: TextStyle(
-                      color: Color.fromRGBO(231, 198, 142, 1.0),
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w400,
-                    ),
+                title: Text(
+                  'Dondre Williams',
+                  style: TextStyle(
+                    color: Color.fromRGBO(231, 198, 142, 1.0),
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 subtitle: Row(
@@ -488,20 +473,19 @@ class _SellersNearbyState extends State<SellersNearby> {
                       color: Color.fromRGBO(231, 198, 142, 1.0),
                       size: 17,
                     ),
-                    Flexible(
-                      child: Text(
-                        'Houston, TX',
-                        style: TextStyle(
-                          color: Color.fromRGBO(231, 198, 142, 0.7),
-                          fontFamily: 'Nunito',
-                          fontWeight: FontWeight.w400,
-                        ),
+                    Text(
+                      'Houston, TX',
+                      style: TextStyle(
+                        color: Color.fromRGBO(231, 198, 142, 0.7),
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ],
                 ),
                 trailing: GestureDetector(
-                  onTap: () {},
+                  onTap: () {}
+                  ,
                   child: Container(
                     padding: EdgeInsets.symmetric(
                       vertical: 5,
@@ -523,10 +507,10 @@ class _SellersNearbyState extends State<SellersNearby> {
                   ),
                 ),
               ),
-
               SizedBox(
                 height: 5,
               ),
+
             ],
           ),
         ),

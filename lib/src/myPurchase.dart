@@ -2,16 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import './myPostingSold.dart';
-import './myPostingAll.dart';
+import './myPurchaseAll.dart';
+import './noPurchase.dart';
 
-class MyPosting extends StatefulWidget {
+class MyPurchase extends StatefulWidget {
   @override
-  _MyPostingState createState() => _MyPostingState();
+  _MyPurchaseState createState() => _MyPurchaseState();
 }
 
-class _MyPostingState extends State<MyPosting> {
-  bool isSold = false;
+class _MyPurchaseState extends State<MyPurchase> {
+  bool isPurchase = true;
 
   @override
   Widget build(BuildContext context) {
@@ -59,11 +59,11 @@ class _MyPostingState extends State<MyPosting> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        isSold = !isSold;
+                        isPurchase = !isPurchase;
                       });
                     },
                     child: Text(
-                      'My Posting',
+                      'My Purchase',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: "Nunito",
@@ -101,7 +101,7 @@ class _MyPostingState extends State<MyPosting> {
                     tabs: [
                       Tab(
                         child: Text(
-                          (!isSold) ? 'All' : 'Sold',
+                          'All',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -111,7 +111,7 @@ class _MyPostingState extends State<MyPosting> {
                       ),
                       Tab(
                         child: Text(
-                          'Most Recent',
+                          'Delivered',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -121,7 +121,7 @@ class _MyPostingState extends State<MyPosting> {
                       ),
                       Tab(
                         child: Text(
-                          'Active',
+                          'Packed',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -131,7 +131,7 @@ class _MyPostingState extends State<MyPosting> {
                       ),
                       Tab(
                         child: Text(
-                          'In Active',
+                          'Dispatched',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -151,7 +151,7 @@ class _MyPostingState extends State<MyPosting> {
         ),
         body: TabBarView(
           children: [
-            (!isSold) ? MyPostingAll() : MyPostingSold(),
+            (isPurchase) ? MyPurchaseAll() : NoPurchase(),
             Container(),
             Container(),
             Container(),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import './src/splashScreen.dart';
 
 void main() {
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
       color: Color.fromRGBO(231, 198, 142, 1),
       theme: ThemeData(
         primaryColor: Color.fromRGBO(231, 198, 142, 1),
+        appBarTheme: Theme.of(context).appBarTheme.copyWith(
+              brightness: Brightness.dark,
+              color: Color.fromRGBO(231, 198, 142, 1),
+            ),
       ),
       home: MyHomePage(),
     );
@@ -31,9 +36,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: SplashScreen(),
+    return AnnotatedRegion(
+      value: SystemUiOverlayStyle.light,
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        body: SplashScreen(),
+      ),
     );
   }
 }

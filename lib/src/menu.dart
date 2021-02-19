@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './myProfile.dart';
 import './myPosting.dart';
+import './draft.dart';
+import './myLikes.dart';
+import './myPurchase.dart';
 
 class Menu extends StatefulWidget {
   @override
@@ -69,30 +72,31 @@ class _MenuState extends State<Menu> {
                 ),
               ),
             ),
-
+            SizedBox(
+              height: 3,
+            ),
             //My Profile
-            FlatButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 setState(() {
                   Navigator.of(context).push(
-                      new MaterialPageRoute(
-                          builder: (context) =>  MyProfile()));
-
+                      new MaterialPageRoute(builder: (context) => MyProfile()));
                 });
               },
-              color: Colors.black,
-              child: Align(
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.person),
+                    Icon(CupertinoIcons.person, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "My Profile",
                         style: TextStyle(
                           fontFamily: 'Nunito',
+                          color: golden,
                           fontSize: 17.0,
                         ),
                       ),
@@ -100,35 +104,33 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //My Posting
-            FlatButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 setState(() {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  MyPosting()));
-
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => MyPosting()));
                 });
               },
-              color: Colors.black,
-              child: Align(
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.square_stack_3d_up),
+                    Icon(CupertinoIcons.square_stack_3d_up, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "My Posting",
                         style: TextStyle(
+                          color: golden,
                           fontFamily: 'Nunito',
                           fontSize: 17.0,
                         ),
@@ -169,30 +171,34 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //Drafts
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Draft()));
+                });
+              },
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.square_stack_3d_up),
+                    Icon(CupertinoIcons.square_stack_3d_up, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "Drafts",
                         style: TextStyle(
                           fontSize: 18.0,
+                          color: golden,
                           fontWeight: FontWeight.w300,
                         ),
                       ),
@@ -232,30 +238,34 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //My Likes
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyLikes()));
+                });
+              },
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.heart),
+                    Icon(CupertinoIcons.heart, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "My Likes",
                         style: TextStyle(
                           fontSize: 18.0,
+                          color: golden,
                           fontWeight: FontWeight.w300,
                         ),
                       ),
@@ -295,30 +305,34 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //My Purchase
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyPurchase()));
+                });
+              },
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.cart),
+                    Icon(CupertinoIcons.cart, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "My Purchase",
                         style: TextStyle(
                           fontSize: 18.0,
+                          color: golden,
                           fontWeight: FontWeight.w300,
                         ),
                       ),
@@ -326,30 +340,29 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //Followers
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.person_2),
+                    Icon(CupertinoIcons.person_2, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "Followers",
                         style: TextStyle(
                           fontFamily: 'Nunito',
+                          color: golden,
                           fontSize: 17.0,
                         ),
                       ),
@@ -389,29 +402,28 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //Following
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.person_2),
+                    Icon(CupertinoIcons.person_2, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "Following",
                         style: TextStyle(
+                          color: golden,
                           fontFamily: 'Nunito',
                           fontSize: 17.0,
                         ),
@@ -452,30 +464,29 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //Billing
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.money_dollar),
+                    Icon(CupertinoIcons.money_dollar, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "Billing",
                         style: TextStyle(
                           fontFamily: 'Nunito',
+                          color: golden,
                           fontSize: 17.0,
                         ),
                       ),
@@ -483,29 +494,28 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //Rating
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(CupertinoIcons.star),
+                    Icon(CupertinoIcons.star, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "Rating",
                         style: TextStyle(
+                          color: golden,
                           fontFamily: 'Nunito',
                           fontSize: 17.0,
                         ),
@@ -546,29 +556,28 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
             //Logout
-            FlatButton(
-              onPressed: () {},
-              color: Colors.black,
-              child: Align(
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(Icons.login_sharp),
+                    Icon(Icons.login_sharp, color: golden),
                     Padding(
                       padding: EdgeInsets.only(left: 10.0),
                       child: new Text(
                         "Logout",
                         style: TextStyle(
+                          color: golden,
                           fontSize: 18.0,
                           fontWeight: FontWeight.w300,
                         ),
@@ -577,12 +586,10 @@ class _MenuState extends State<Menu> {
                   ],
                 ),
               ),
-              textColor: golden,
-              padding: EdgeInsets.fromLTRB(9, 9, 9, 9),
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 15,
               ),
             ),
           ],
