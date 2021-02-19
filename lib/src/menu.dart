@@ -5,6 +5,7 @@ import './myPosting.dart';
 import './draft.dart';
 import './myLikes.dart';
 import './myPurchase.dart';
+import './billing.dart';
 
 class Menu extends StatefulWidget {
   @override
@@ -472,7 +473,12 @@ class _MenuState extends State<Menu> {
             ),
             //Billing
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Billing()));
+                });
+              },
               child: Container(
                 padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,

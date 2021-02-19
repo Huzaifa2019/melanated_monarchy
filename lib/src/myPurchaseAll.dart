@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import './myPurchaseDetails.dart';
 import './myPurchaseDetailsUnpaid.dart';
+import './billing.dart';
 
 class MyPurchaseAll extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _MyPurchaseAllState extends State<MyPurchaseAll> {
     Color goldenDull = Color.fromRGBO(231, 198, 142, 0.7);
 
     // var size = MediaQuery.of(context).size;
-    return  Container(
+    return Container(
       margin: const EdgeInsets.only(left: 35.0, right: 35.0),
       alignment: Alignment.center,
       child: ListView(
@@ -177,7 +178,12 @@ class _MyPurchaseAllState extends State<MyPurchaseAll> {
                     Expanded(
                       flex: 1,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          setState(() {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Billing()));
+                          });
+                        },
                         child: Container(
                           alignment: Alignment.center,
                           height: 32,
@@ -208,10 +214,8 @@ class _MyPurchaseAllState extends State<MyPurchaseAll> {
                         child: GestureDetector(
                           onTap: () {
                             setState(() {
-                              Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          MyPurchaseDetails()));
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => MyPurchaseDetails()));
                             });
                           },
                           child: Row(
@@ -402,7 +406,12 @@ class _MyPurchaseAllState extends State<MyPurchaseAll> {
                     Expanded(
                       flex: 1,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          setState(() {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Billing()));
+                          });
+                        },
                         child: Container(
                           alignment: Alignment.center,
                           height: 32,
@@ -433,10 +442,9 @@ class _MyPurchaseAllState extends State<MyPurchaseAll> {
                         child: GestureDetector(
                           onTap: () {
                             setState(() {
-                              Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          MyPurchaseDetailsUnpaid()));
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      MyPurchaseDetailsUnpaid()));
                             });
                           },
                           child: Row(

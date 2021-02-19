@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './billing.dart';
 
 class MyPurchaseDetailsUnpaid extends StatefulWidget {
   @override
@@ -323,7 +324,6 @@ class _MyPurchaseDetailsUnpaidState extends State<MyPurchaseDetailsUnpaid> {
                       Expanded(
                         flex: 1,
                         child: Container(
-
                           child: Text(
                             'Pay Before:\n23:44:16',
                             textAlign: TextAlign.center,
@@ -345,7 +345,6 @@ class _MyPurchaseDetailsUnpaidState extends State<MyPurchaseDetailsUnpaid> {
                         flex: 1,
                         child: Container(
                           padding: EdgeInsets.only(left: 1),
-
                           child: Column(
                             children: [
                               Row(
@@ -456,7 +455,13 @@ class _MyPurchaseDetailsUnpaidState extends State<MyPurchaseDetailsUnpaid> {
                                 height: 2,
                               ),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  setState(() {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => Billing()));
+                                  });
+                                },
                                 child: Container(
                                   alignment: Alignment.center,
                                   height: 32,

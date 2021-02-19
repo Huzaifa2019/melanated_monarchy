@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './billing.dart';
 
 class MyPurchaseDetails extends StatefulWidget {
   @override
@@ -330,7 +331,7 @@ class _MyPurchaseDetailsState extends State<MyPurchaseDetails> {
                             children: [
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Item Price:',
@@ -355,7 +356,7 @@ class _MyPurchaseDetailsState extends State<MyPurchaseDetails> {
                               ),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Shipping Fees',
@@ -380,7 +381,7 @@ class _MyPurchaseDetailsState extends State<MyPurchaseDetails> {
                               ),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Item Price:',
@@ -405,7 +406,7 @@ class _MyPurchaseDetailsState extends State<MyPurchaseDetails> {
                               ),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Item Price:',
@@ -428,10 +429,12 @@ class _MyPurchaseDetailsState extends State<MyPurchaseDetails> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 5,),
+                              SizedBox(
+                                height: 5,
+                              ),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Total',
@@ -439,7 +442,8 @@ class _MyPurchaseDetailsState extends State<MyPurchaseDetails> {
                                     style: TextStyle(
                                       color: golden,
                                       fontFamily: 'Nunito',
-                                      fontSize: 15, fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
@@ -454,9 +458,17 @@ class _MyPurchaseDetailsState extends State<MyPurchaseDetails> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 2,),
+                              SizedBox(
+                                height: 2,
+                              ),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  setState(() {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) => Billing()));
+                                  });
+                                },
                                 child: Container(
                                   alignment: Alignment.center,
                                   height: 32,
