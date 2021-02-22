@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import './bidding.dart';
+
+import './messages.dart';
 import './sellersNearby.dart';
 import './menu.dart';
+import './dashboardBidding.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -20,7 +24,7 @@ class _DashboardState extends State<Dashboard> {
       backgroundColor: Colors.black,
       body: Container(
         width: size.width,
-        height: size.height,
+        height: size.height - 45,
         margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
         padding: EdgeInsets.symmetric(
           vertical: 0,
@@ -125,11 +129,10 @@ class _DashboardState extends State<Dashboard> {
                       ),
                       onPressed: () {
                         setState(() {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context){
-                              return new SellersNearby();
-                            })
-                          );
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (context) {
+                            return new SellersNearby();
+                          }));
                         });
                       }),
                 ],
@@ -376,25 +379,36 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ),
                   Expanded(
-                    child: Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'See more ',
-                            textAlign: TextAlign.end,
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w300,
-                              color: golden,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          Navigator.of(context).push(
+                            new MaterialPageRoute(
+                              builder: (context) => Bidding(),
                             ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_rounded,
-                            color: golden,
-                            size: 25,
-                          ),
-                        ],
+                          );
+                        });
+                      },
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              'See more ',
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w300,
+                                color: golden,
+                              ),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_rounded,
+                              color: golden,
+                              size: 25,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -403,552 +417,7 @@ class _DashboardState extends State<Dashboard> {
               SizedBox(
                 height: 10,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 15),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: golden,
-                          width: 3,
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 60,
-                            width: 100,
-                            padding: EdgeInsets.all(1),
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  'assets/images/shoes.png',
-                                ),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            alignment: Alignment.topRight,
-                            child: GestureDetector(
-                              onTap: () {},
-                              child: Icon(
-                                CupertinoIcons.heart,
-                                color: golden,
-                                size: 17,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            width: 99,
-                            margin: EdgeInsets.all(1),
-                            padding: EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                              color: golden,
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Bid \$50',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Text(
-                                  '+ free Shipping',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 7,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 2.0, right: 2, top: 3, bottom: 4),
-                            child: Stack(
-                              children: [
-                                Container(
-                                  height: 3,
-                                  width: 99,
-                                  color: Color.fromRGBO(231, 198, 142, 0.4),
-                                ),
-                                Container(
-                                  height: 3,
-                                  width: 79,
-                                  color: golden,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            'ACCEPTING BID',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: golden,
-                              fontSize: 7,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 70,
-                                padding: EdgeInsets.all(5),
-                                margin: EdgeInsets.only(
-                                  bottom: 10,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: golden,
-                                    width: 3,
-                                  ),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text(
-                                      '70%\noff',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 20,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: Colors.grey, width: 0.25),
-                                      ),
-                                    ),
-                                    Text(
-                                      '\$180',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        decoration: TextDecoration.lineThrough,
-                                        color: golden,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 28,
-                                child: Text(
-                                  '10\nBIDS',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: golden,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                              ),
-                              // Expanded(flex:1,child: Container(),),
-                            ],
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.star,
-                                  color: golden,
-                                  size: 12,
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Text(
-                                  '4.5',
-                                  style: TextStyle(
-                                    color: golden,
-                                    fontSize: 9,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(right: 15),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: golden,
-                          width: 3,
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 60,
-                            width: 100,
-                            padding: EdgeInsets.all(1),
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  'assets/images/shoes.png',
-                                ),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            alignment: Alignment.topRight,
-                            child: GestureDetector(
-                              onTap: () {},
-                              child: Icon(
-                                CupertinoIcons.heart,
-                                color: golden,
-                                size: 17,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            width: 99,
-                            margin: EdgeInsets.all(1),
-                            padding: EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                              color: golden,
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Bid \$50',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Text(
-                                  '+ free Shipping',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 7,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 2.0, right: 2, top: 3, bottom: 4),
-                            child: Stack(
-                              children: [
-                                Container(
-                                  height: 3,
-                                  width: 99,
-                                  color: Color.fromRGBO(231, 198, 142, 0.4),
-                                ),
-                                Container(
-                                  height: 3,
-                                  width: 79,
-                                  color: golden,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            'ACCEPTING BID',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: golden,
-                              fontSize: 7,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 70,
-                                padding: EdgeInsets.all(5),
-                                margin: EdgeInsets.only(
-                                  bottom: 10,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: golden,
-                                    width: 3,
-                                  ),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text(
-                                      '70%\noff',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 20,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: Colors.grey, width: 0.25),
-                                      ),
-                                    ),
-                                    Text(
-                                      '\$180',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        decoration: TextDecoration.lineThrough,
-                                        color: golden,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 28,
-                                child: Text(
-                                  '10\nBIDS',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: golden,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                              ),
-                              // Expanded(flex:1,child: Container(),),
-                            ],
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.star,
-                                  color: golden,
-                                  size: 12,
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Text(
-                                  '4.5',
-                                  style: TextStyle(
-                                    color: golden,
-                                    fontSize: 9,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: golden,
-                          width: 3,
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 60,
-                            width: 100,
-                            padding: EdgeInsets.all(1),
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  'assets/images/shoes.png',
-                                ),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            alignment: Alignment.topRight,
-                            child: GestureDetector(
-                              onTap: () {},
-                              child: Icon(
-                                CupertinoIcons.heart,
-                                color: golden,
-                                size: 17,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            width: 99,
-                            margin: EdgeInsets.all(1),
-                            padding: EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                              color: golden,
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Bid \$50',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Text(
-                                  '+ free Shipping',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 7,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 2.0, right: 2, top: 3, bottom: 4),
-                            child: Stack(
-                              children: [
-                                Container(
-                                  height: 3,
-                                  width: 99,
-                                  color: Color.fromRGBO(231, 198, 142, 0.4),
-                                ),
-                                Container(
-                                  height: 3,
-                                  width: 79,
-                                  color: golden,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            'ACCEPTING BID',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: golden,
-                              fontSize: 7,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 70,
-                                padding: EdgeInsets.all(5),
-                                margin: EdgeInsets.only(
-                                  bottom: 10,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: golden,
-                                    width: 3,
-                                  ),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text(
-                                      '70%\noff',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 20,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: Colors.grey, width: 0.25),
-                                      ),
-                                    ),
-                                    Text(
-                                      '\$180',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        decoration: TextDecoration.lineThrough,
-                                        color: golden,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 28,
-                                child: Text(
-                                  '10\nBIDS',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: golden,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                              ),
-                              // Expanded(flex:1,child: Container(),),
-                            ],
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.star,
-                                  color: golden,
-                                  size: 12,
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Text(
-                                  '4.5',
-                                  style: TextStyle(
-                                    color: golden,
-                                    fontSize: 9,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              DashboardBidding(),
               SizedBox(
                 height: 30,
               ),
@@ -1268,59 +737,73 @@ class _DashboardState extends State<Dashboard> {
                 ),
               ),
               SizedBox(
-                height: 35,
-              ),
-              Container(
-                width: size.width - 20,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                      width: 1,
-                      color: Color(0xFF9D7A54),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/speech.png',
-                      ),
-                      height: 28,
-                    ),
-                  ),
-                  Container(
-                    height: 28,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 0.5,
-                        color: golden,
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/bell.png',
-                      ),
-                      height: 28,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
+                height: 65,
               ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 45,
+        width: size.width - 20,
+        decoration: BoxDecoration(
+          border: Border(
+            top: BorderSide(
+              width: 1,
+              color: Color(0xFF9D7A54),
+            ),
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 5,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      Navigator.of(context).push(
+                        new MaterialPageRoute(
+                          builder: (context) => Messages(),
+                        ),
+                      );
+                    });
+                  },
+                  child: Image(
+                    image: AssetImage(
+                      'assets/images/speech.png',
+                    ),
+                    height: 28,
+                  ),
+                ),
+                Container(
+                  height: 28,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 0.5,
+                      color: golden,
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Image(
+                    image: AssetImage(
+                      'assets/images/bell.png',
+                    ),
+                    height: 28,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            ),
+          ],
         ),
       ),
     );

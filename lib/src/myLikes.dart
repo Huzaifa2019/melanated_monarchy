@@ -9,6 +9,7 @@ class MyLikes extends StatefulWidget {
 }
 
 class _MyLikesState extends State<MyLikes> {
+  bool isLike = true;
   @override
   Widget build(BuildContext context) {
     Color golden = Color.fromRGBO(231, 198, 142, 1.0);
@@ -45,14 +46,21 @@ class _MyLikesState extends State<MyLikes> {
                   ),
                 ),
                 padding: const EdgeInsets.only(bottom: 5.0),
-                child: Text(
-                  'My Likes',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: "Nunito",
-                    fontSize: 25,
-                    fontWeight: FontWeight.w600,
-                    color: golden,
+                child: GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      isLike = !isLike;
+                    });
+                  },
+                  child: Text(
+                    'My Likes',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: "Nunito",
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                      color: golden,
+                    ),
                   ),
                 ),
               ),
@@ -61,7 +69,8 @@ class _MyLikesState extends State<MyLikes> {
         ],
         backgroundColor: Colors.black,
       ),
-      body: Container(
+      body: (isLike)
+        ? Container(
         margin: const EdgeInsets.only(left: 35.0, right: 35.0),
         alignment: Alignment.center,
         child: ListView(
@@ -131,10 +140,6 @@ class _MyLikesState extends State<MyLikes> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          setState(() {
-                            Navigator.of(context).push(new MaterialPageRoute(
-                                builder: (context) => NoLikes()));
-                          });
                         },
                         child: Icon(
                           CupertinoIcons.heart_fill,
@@ -152,7 +157,8 @@ class _MyLikesState extends State<MyLikes> {
             ),
           ],
         ),
-      ),
+      )
+          : NoLikes(),
     );
   }
 }

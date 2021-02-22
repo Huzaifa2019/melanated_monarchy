@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class NoLikes extends StatefulWidget {
+class NoRating extends StatefulWidget {
   @override
-  _NoLikesState createState() => _NoLikesState();
+  _NoRatingState createState() => _NoRatingState();
 }
 
-class _NoLikesState extends State<NoLikes> {
+class _NoRatingState extends State<NoRating> {
   @override
   Widget build(BuildContext context) {
     Color golden = Color.fromRGBO(231, 198, 142, 1.0);
-    // var size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(left: 35.0, right: 35.0),
       alignment: Alignment.center,
@@ -23,7 +23,7 @@ class _NoLikesState extends State<NoLikes> {
           Container(
             alignment: Alignment.center,
             child: Text(
-              'There are no favourites',
+              'There is no rating',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: golden,
@@ -44,7 +44,7 @@ class _NoLikesState extends State<NoLikes> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    'assets/images/noLikes.png',
+                    'assets/images/noRating.png',
                   ),
                   fit: BoxFit.fill,
                 ),
@@ -57,7 +57,7 @@ class _NoLikesState extends State<NoLikes> {
           Container(
             alignment: Alignment.center,
             child: Text(
-              'When you like a product, you can add them to your favourites to refer back at them when needed.',
+              'To start getting rated, increase your sales and start building connections',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: golden,
@@ -83,7 +83,7 @@ class _NoLikesState extends State<NoLikes> {
                 ]),
               ),
               child: Text(
-                'Continue Shopping',
+                'Create New Listing',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 17,

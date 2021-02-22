@@ -6,6 +6,11 @@ import './draft.dart';
 import './myLikes.dart';
 import './myPurchase.dart';
 import './billing.dart';
+import './followers.dart';
+import './following.dart';
+import './rating.dart';
+
+
 
 class Menu extends StatefulWidget {
   @override
@@ -349,7 +354,12 @@ class _MenuState extends State<Menu> {
             ),
             //Followers
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Followers()));
+                });
+              },
               child: Container(
                 padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
@@ -411,7 +421,12 @@ class _MenuState extends State<Menu> {
             ),
             //Following
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Following()));
+                });
+              },
               child: Container(
                 padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
@@ -508,7 +523,12 @@ class _MenuState extends State<Menu> {
             ),
             //Rating
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Rating()));
+                });
+              },
               child: Container(
                 padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,
@@ -570,7 +590,12 @@ class _MenuState extends State<Menu> {
             ),
             //Logout
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).pop();
+                });
+              },
               child: Container(
                 padding: EdgeInsets.all(9),
                 alignment: Alignment.centerLeft,

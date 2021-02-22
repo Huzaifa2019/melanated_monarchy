@@ -28,7 +28,6 @@ class _MyPurchaseState extends State<MyPurchase> {
           foregroundColor: golden,
           // title: Text('Menu'),
           toolbarHeight: 150,
-
           actions: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,

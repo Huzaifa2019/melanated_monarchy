@@ -347,6 +347,7 @@ class _BillingState extends State<Billing> {
                   _datePicker();
                 });
               },
+
               style: TextStyle(
                 color: golden,
                 height: 0.8,

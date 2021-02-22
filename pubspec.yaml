@@ -46,30 +46,43 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/logo.png
-    - assets/images/facebook.png
-    - assets/images/google-plus.png
-    - assets/images/profile.png
-    - assets/images/mobileCovers.png
+    - assets/images/bag.png
     - assets/images/bell.png
+    - assets/images/bell-fill.png
     - assets/images/car.png
+    - assets/images/conversation.png
     - assets/images/customer-support.png
+    - assets/images/email.png
+    - assets/images/facebook.png
+    - assets/images/glasses.png
+    - assets/images/google-plus.png
     - assets/images/group-black.png
     - assets/images/group-golden.png
     - assets/images/gym.png
     - assets/images/hoodie.png
     - assets/images/house-black.png
     - assets/images/house-golden.png
+    - assets/images/logo.png
+    - assets/images/location.png
+    - assets/images/listing-img.png
+    - assets/images/medal.png
+    - assets/images/mobileCovers.png
+    - assets/images/noLikes.png
+    - assets/images/noRating.png
+    - assets/images/no-notification.png
+    - assets/images/no-posting.png
+    - assets/images/profile.png
+    - assets/images/postingImage.png
     - assets/images/section.png
     - assets/images/shoes.png
+    - assets/images/smartphone.png
     - assets/images/speech.png
+    - assets/images/speech-fill.png
     - assets/images/tag.png
     - assets/images/television.png
+    - assets/images/upload-files.png
     - assets/images/work.png
-    - assets/images/postingImage.png
-    - assets/images/noLikes.png
-    - assets/images/glasses.png
-    - assets/images/bag.png
+
     #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
