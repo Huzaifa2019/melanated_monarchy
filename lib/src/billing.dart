@@ -7,14 +7,12 @@ class Billing extends StatefulWidget {
 }
 
 class _BillingState extends State<Billing> {
-
   void _datePicker() {
-
     DateTime _selectedDate;
     showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime(21910),
+      firstDate: DateTime(1910),
       lastDate: DateTime.now(),
     ).then((pickedDate) {
       if (pickedDate == null) {
@@ -23,7 +21,6 @@ class _BillingState extends State<Billing> {
       setState(() {
         _selectedDate = pickedDate;
       });
-
       print(_selectedDate);
     });
   }
@@ -347,7 +344,6 @@ class _BillingState extends State<Billing> {
                   _datePicker();
                 });
               },
-
               style: TextStyle(
                 color: golden,
                 height: 0.8,

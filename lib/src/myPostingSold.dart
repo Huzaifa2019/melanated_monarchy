@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import './createListing1.dart';
+
 class MyPostingSold extends StatefulWidget {
   @override
   _MyPostingSoldState createState() => _MyPostingSoldState();
@@ -193,9 +195,49 @@ class _MyPostingSoldState extends State<MyPostingSold> {
               ),
             ],
           ),
+
           SizedBox(
-            height: 15,
+            height: 30,
           ),
+          //Create New Listing
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context)=>CreateListing1())
+                );
+              });
+            },
+            child: Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(horizontal: 30),
+              padding:
+              EdgeInsets.symmetric(horizontal: 9, vertical: 13),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  Color.fromRGBO(231, 198, 142, 1),
+                  Color.fromRGBO(184, 149, 105, 1),
+                  Color.fromRGBO(157, 122, 84, 1),
+                ]),
+              ),
+              child: Text(
+                'Create New Listing',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: "Nunito",
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ),
+
+          SizedBox(
+            height: 10,
+          ),
+
+
         ],
       ),
     );

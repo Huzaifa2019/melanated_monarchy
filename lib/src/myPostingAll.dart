@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import './createListing1.dart';
+
 class MyPostingAll extends StatefulWidget {
   @override
   _MyPostingAllState createState() => _MyPostingAllState();
@@ -491,7 +493,13 @@ class _MyPostingAllState extends State<MyPostingAll> {
           ),
           //Create New Listing
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              setState(() {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context)=>CreateListing1())
+                );
+              });
+            },
             child: Container(
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: 30),

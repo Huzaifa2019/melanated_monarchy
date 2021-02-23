@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Melanated Monarchy',
       color: Color.fromRGBO(231, 198, 142, 1),
       theme: ThemeData(
-        // primarySwatch: Colors.g,
+        primarySwatch: Colors.amber,
+        
         accentColor:  Color.fromRGBO(231, 198, 142, 0.7),
         primaryColor: Color.fromRGBO(231, 198, 142, 1),
         splashColor: Color.fromRGBO(231, 198, 142, 0.7),

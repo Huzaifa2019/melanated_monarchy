@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import './noMessages.dart';
 import './menu.dart';
 import './messagesDetails.dart';
+import './searchResult.dart';
 
 class Messages extends StatefulWidget {
   @override
@@ -128,7 +129,11 @@ class _MessagesState extends State<Messages> {
                         color: Color.fromRGBO(231, 198, 142, 0.8),
                         size: 30,
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context)=> SearchResult(),
+                        ));
+                      }),
                 ],
               ),
               SizedBox(

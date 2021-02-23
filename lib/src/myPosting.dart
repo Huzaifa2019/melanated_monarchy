@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 import './myPostingSold.dart';
 import './myPostingAll.dart';
+import './noPosting.dart';
+import './createListing1.dart';
 
 class MyPosting extends StatefulWidget {
   @override
@@ -11,7 +13,7 @@ class MyPosting extends StatefulWidget {
 }
 
 class _MyPostingState extends State<MyPosting> {
-  bool isSold = false;
+  bool isEmpty = false;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +61,7 @@ class _MyPostingState extends State<MyPosting> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        isSold = !isSold;
+                        isEmpty = !isEmpty;
                       });
                     },
                     child: Text(
@@ -101,7 +103,7 @@ class _MyPostingState extends State<MyPosting> {
                     tabs: [
                       Tab(
                         child: Text(
-                          (!isSold) ? 'All' : 'Sold',
+                          'All',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -151,12 +153,13 @@ class _MyPostingState extends State<MyPosting> {
         ),
         body: TabBarView(
           children: [
-            (!isSold) ? MyPostingAll() : MyPostingSold(),
-            Container(),
+            (!isEmpty) ? MyPostingAll() : NoPosting(),
+            MyPostingSold(),
             Container(),
             Container(),
           ],
         ),
+
       ),
     );
   }
