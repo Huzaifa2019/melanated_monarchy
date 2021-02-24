@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import './createListing2.dart';
+
 class CreateListing1 extends StatefulWidget {
   @override
   _CreateListing1State createState() => _CreateListing1State();
@@ -581,7 +583,11 @@ class _CreateListing1State extends State<CreateListing1> {
               height: 30,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> CreateListing2()));
+                });
+              },
               child: Container(
                 alignment: Alignment.center,
                 margin: EdgeInsets.symmetric(horizontal: 30),
