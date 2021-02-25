@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import './myPostingSold.dart';
 import './myPostingAll.dart';
 import './noPosting.dart';
-import './createListing1.dart';
 
 class MyPosting extends StatefulWidget {
   @override

@@ -32,6 +32,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.8.0"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -74,6 +80,7 @@ flutter:
     - assets/images/profile.png
     - assets/images/postingImage.png
     - assets/images/section.png
+    - assets/images/shipping.png
     - assets/images/shoes.png
     - assets/images/smartphone.png
     - assets/images/speech.png

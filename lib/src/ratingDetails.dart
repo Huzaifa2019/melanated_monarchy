@@ -2,16 +2,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RatingDetails extends StatefulWidget {
-  @override
+
   double appBarSize;
-  RatingDetails(this.appBarSize){}
+
+  @override
+  RatingDetails(appBarSize){
+    this.appBarSize = appBarSize;
+  }
   _RatingDetailsState createState() => _RatingDetailsState(appBarSize);
 }
 
 class _RatingDetailsState extends State<RatingDetails> {
 
   double appBarSize;
-  _RatingDetailsState(this.appBarSize){}
+  _RatingDetailsState(appBarSize){
+    this.appBarSize = appBarSize;
+  }
   @override
   Widget build(BuildContext context) {
     Color golden = Color.fromRGBO(231, 198, 142, 1.0);

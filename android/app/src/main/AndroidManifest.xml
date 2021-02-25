@@ -2,8 +2,8 @@
     package="com.example.melanated_monarchy_mob">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="melanated_monarchy_mob"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Melanated Monarchy"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

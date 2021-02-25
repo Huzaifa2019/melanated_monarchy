@@ -9,7 +9,7 @@ class MessagesDetails extends StatefulWidget {
 class _MessagesDetailsState extends State<MessagesDetails> {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    // var size = MediaQuery.of(context).size;
     Color golden = Color.fromRGBO(231, 198, 142, 1.0);
     Color goldenDull = Color.fromRGBO(231, 198, 142, 0.7);
 

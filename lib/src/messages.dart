@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import './noMessages.dart';
 import './menu.dart';
 import './messagesDetails.dart';
 import './searchResult.dart';
+import './notifications.dart';
 
 class Messages extends StatefulWidget {
   @override
@@ -238,37 +240,48 @@ class _MessagesState extends State<Messages> {
               SizedBox(
                 height: 5,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/speech-fill.png',
+              SizedBox(
+                width: size.width,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    GestureDetector(
+                      onTap: () {},
+                      child: Image(
+                        image: AssetImage(
+                          'assets/images/speech-fill.png',
+                        ),
+                        height: 28,
                       ),
+                    ),
+                    Container(
                       height: 28,
-                    ),
-                  ),
-                  Container(
-                    height: 28,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 0.5,
-                        color: golden,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0.5,
+                          color: golden,
+                        ),
                       ),
                     ),
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Image(
-                      image: AssetImage(
-                        'assets/images/bell.png',
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          Navigator.of(context).push(
+                            new MaterialPageRoute(
+                              builder: (context) => Notifications(),
+                            ),
+                          );
+                        });
+                      },
+                      child: Image(
+                        image: AssetImage(
+                          'assets/images/bell.png',
+                        ),
+                        height: 28,
                       ),
-                      height: 28,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(
                 height: 5,

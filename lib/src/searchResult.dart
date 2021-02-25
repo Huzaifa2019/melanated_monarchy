@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import './menu.dart';
 import './messages.dart';
+import './notifications.dart';
 
 class SearchResult extends StatefulWidget {
   @override
@@ -616,42 +617,50 @@ class _SearchResultState extends State<SearchResult> {
             SizedBox(
               height: 5,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      Navigator.push(context, 
-                      MaterialPageRoute(builder: (context)=> Messages()));
-                    });
-                  },
-                  child: Image(
-                    image: AssetImage(
-                      'assets/images/speech-fill.png',
+            SizedBox(
+             width: size.width, child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=> Messages()));
+                      });
+                    },
+                    child: Image(
+                      image: AssetImage(
+                        'assets/images/speech-fill.png',
+                      ),
+                      height: 28,
                     ),
+                  ),
+                  Container(
                     height: 28,
-                  ),
-                ),
-                Container(
-                  height: 28,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 0.5,
-                      color: golden,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 0.5,
+                        color: golden,
+                      ),
                     ),
                   ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Image(
-                    image: AssetImage(
-                      'assets/images/bell-fill.png',
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=> Notifications()));
+                      });
+
+                    },
+                    child: Image(
+                      image: AssetImage(
+                        'assets/images/bell-fill.png',
+                      ),
+                      height: 28,
                     ),
-                    height: 28,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               height: 5,

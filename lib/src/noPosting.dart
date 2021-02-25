@@ -12,7 +12,7 @@ class _NoPostingState extends State<NoPosting> {
   @override
   Widget build(BuildContext context) {
     Color golden = Color.fromRGBO(231, 198, 142, 1.0);
-    var size = MediaQuery.of(context).size;
+    // var size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(left: 35.0, right: 35.0),
       alignment: Alignment.center,
