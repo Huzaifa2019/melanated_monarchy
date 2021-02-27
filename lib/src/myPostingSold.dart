@@ -15,7 +15,7 @@ class _MyPostingSoldState extends State<MyPostingSold> {
     Color goldenDull = Color.fromRGBO(231, 198, 142, 0.7);
 
     var size = MediaQuery.of(context).size;
-    return  Container(
+    return Container(
       margin: const EdgeInsets.only(left: 35.0, right: 35.0),
       alignment: Alignment.center,
       child: ListView(
@@ -204,15 +204,13 @@ class _MyPostingSoldState extends State<MyPostingSold> {
             onTap: () {
               setState(() {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context)=>CreateListing1())
-                );
+                    MaterialPageRoute(builder: (context) => CreateListing1()));
               });
             },
             child: Container(
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: 30),
-              padding:
-              EdgeInsets.symmetric(horizontal: 9, vertical: 13),
+              padding: EdgeInsets.symmetric(horizontal: 9, vertical: 13),
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
                   Color.fromRGBO(231, 198, 142, 1),
@@ -236,8 +234,6 @@ class _MyPostingSoldState extends State<MyPostingSold> {
           SizedBox(
             height: 10,
           ),
-
-
         ],
       ),
     );

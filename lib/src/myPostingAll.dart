@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:melanated_monarchy_mob/src/productDetail.dart';
 
+import './productDetail.dart';
 import './createListing1.dart';
 
 class MyPostingAll extends StatefulWidget {

@@ -72,6 +72,7 @@ flutter:
     - assets/images/location.png
     - assets/images/listing-img.png
     - assets/images/medal.png
+    - assets/images/message.png
     - assets/images/mobileCovers.png
     - assets/images/noLikes.png
     - assets/images/noRating.png
